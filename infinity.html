@@ -1,23 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="cFx9C9BQTilnVASVaJ_kUg5KR6wGELJGIgH5hndOcyM" />
-    
-    <link rel="stylesheet" href="infinity.css">
-    
-     <title>Document</title>
+  <title>Colorful Website</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      color: #e74c3c;
+    }
+
+    p {
+      color: #3498db;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      display: inline-block;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    .box:hover {
+      transform: scale(1.2);
+    }
+
+    .red {
+      background-color: #e74c3c;
+    }
+
+    .blue {
+      background-color: #3498db;
+    }
+
+    .green {
+      background-color: #2ecc71;
+    }
+  </style>
 </head>
 <body>
-    
-<div class="container">
-    <div class="ring"> </div>
-    <div class="ring"> </div>
-    <div class="ring"> </div>
-    <p>Loading...</p>
-</div>
-
+  <h1>Welcome to the Colorful Website!</h1>
+  <p>Choose a color:</p>
+  <div class="box red"></div>
+  <div class="box blue"></div>
+  <div class="box green"></div>
 </body>
 </html>
