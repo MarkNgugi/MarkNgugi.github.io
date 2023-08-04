@@ -1,135 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Product Details</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .product {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .product-details {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h2 {
-      margin-top: 0;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    .photos {
-      display: flex;
-      position: relative;
-    }
-
-    .photo {
-      max-width: 100%;
-      height: auto;
-      display: none;
-    }
-
-    .photo.active {
-      display: block;
-    }
-
-    button {
-      margin-top: 10px;
-      padding: 10px;
-      background-color: #007BFF;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-
-    button.view-product {
-      background-color: #007BFF;
-    }
-
-    button.contact-owner {
-      background-color: #28a745;
-    }
-
-    .prev-btn,
-    .next-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .next-btn {
-      right: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="cFx9C9BQTilnVASVaJ_kUg5KR6wGELJGIgH5hndOcyM" />
+    
+    <link rel="stylesheet" href="infinity.css">
+    
+     <title>Document</title>
 </head>
 <body>
-  <div class="product">
-    <h2>Chair</h2>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGms3rcHmhH3GO6NKrP73D6ZqXqG1RPwczmGboopA_q4jXlg7LfxEpeutWslkclmXZHvQ&usqp=CAU" alt="Chair Image">
-    <button class="view-product">View Product</button>
-    <button class="contact-owner">Contact Owner</button>
-  </div>
+    
+<div class="container">
+    <div class="ring"> </div>
+    <div class="ring"> </div>
+    <div class="ring"> </div>
+    <p>Loading...</p>
+</div>
 
-  <div class="product-details" style="display: none;">
-    <h2>Chair</h2>
-    <div class="photos">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvPb1SWAqWnVbuHyKiLwWpdvgVmoOhbZgUnxzDZ2zCJOzLkdPRdExiaBoWaPOUy3S8rSc&usqp=CAU" alt="Image 1" class="photo active">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIyNOjc6Rv47eNL6eZ7WlnlUbYOzBVS3Q-VHPdrnioL6JTZtxEu-_-Ml940hxMlPNfMII&usqp=CAU" alt="Image 2" class="photo">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLmjrvT0ZhNXUUGCleZO5II0_4PLNIaY05dej5Ie7XF4LM7XN3GhKht8WP6TLkabgB67M&usqp=CAU" alt="Image 3" class="photo">
-      <button class="prev-btn">&#60;</button>
-      <button class="next-btn">&#62;</button>
-    </div>
-    <p>Description: A comfortable chair for everyday use.</p>
-    <p>Price: Ksh 1500</p>
-  </div>
-
-  <script>
-    const viewProductButton = document.querySelector('.view-product');
-    const productPage = document.querySelector('.product-details');
-    const photos = document.querySelectorAll('.photo');
-    let currentIndex = 0;
-
-    viewProductButton.addEventListener('click', () => {
-      productPage.style.display = 'block';
-    });
-
-    function showPhoto(index) {
-      photos.forEach((photo, i) => {
-        if (i === index) {
-          photo.classList.add('active');
-        } else {
-          photo.classList.remove('active');
-        }
-      });
-    }
-
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + photos.length) % photos.length;
-      showPhoto(currentIndex);
-    });
-
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % photos.length;
-      showPhoto(currentIndex);
-    });
-  </script>
 </body>
 </html>
